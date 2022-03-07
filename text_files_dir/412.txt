@@ -85,6 +85,7 @@ ratchford
 moffett
 delaware
 evans
+jr
 florida
 hutto
 fuqua
@@ -413,6 +414,7 @@ marks
 atkinson
 rhode
 island
+st
 germain
 schneider
 south
@@ -451,6 +453,8 @@ leath
 wright
 hightower
 patman
+de
+la
 garza
 white
 stenholm
@@ -471,6 +475,7 @@ trible
 whitehurst
 bliley
 daniel
+rw
 daniel
 butler
 robinson

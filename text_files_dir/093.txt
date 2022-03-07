@@ -1,7 +1,6 @@
 the
 workspace
 stand
-the
 eurobot
 exhibition
 frankfurt
@@ -9,7 +8,6 @@ germany
 the
 workspace
 stand
-the
 eurobot
 exhibition
 frankfurt
@@ -18,9 +16,7 @@ return
 home
 page
 workspace
-and
 robotrak
-are
 registered
 trademarks
 robot

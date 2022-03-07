@@ -10,6 +10,8 @@ acu
 key
 issues
 index
+st
+nd
 cum
 alabama
 allen
@@ -157,6 +159,7 @@ aiken
 stafford
 virginia
 byrd
+jr
 spong
 washington
 jackson

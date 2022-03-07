@@ -7,7 +7,6 @@ mercy
 region
 lower
 michigan
-and
 toledo
 ohio
 secular
@@ -38,6 +37,7 @@ amore
 sfo
 formation
 minister
+at
 large
 councilors
 james
@@ -53,20 +53,22 @@ west
 sfo
 spiritual
 assistants
+fr
 ulric
 buening
 ofm
 cap
+fr
 bonaventure
 crowley
 ofm
 conv
+fr
 reynold
 jarecki
 ofm
 please
 sign
-our
 guestbook
 regional
 information
@@ -76,6 +78,7 @@ regional
 guidelines
 short
 history
+of
 the
 region
 fraternity
@@ -84,9 +87,7 @@ divine
 mercy
 newsletter
 search
-our
 site
-for
 secular
 franciscan
 resources
@@ -94,6 +95,7 @@ sfo
 introduction
 sfo
 rule
+of
 life
 constitutions
 national
@@ -111,6 +113,7 @@ lists
 the
 cord
 tour
+of
 assisi
 pages
 compliments

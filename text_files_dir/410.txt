@@ -1,6 +1,7 @@
 ratings
 acu
 ratings
+us
 house
 alabama
 edwards
@@ -82,6 +83,7 @@ ratchford
 moffett
 delaware
 evans
+jr
 florida
 hutto
 fuqua
@@ -410,6 +412,7 @@ marks
 atkinson
 rhode
 island
+st
 germain
 beard
 south
@@ -448,6 +451,8 @@ leah
 wright
 hightower
 wyatt
+de
+la
 garza
 white
 stenholm
@@ -468,6 +473,7 @@ trible
 whitehurst
 satterfield
 daniel
+rw
 daniel
 butler
 robinson

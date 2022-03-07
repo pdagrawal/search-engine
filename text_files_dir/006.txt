@@ -1,6 +1,7 @@
 battlecrhtm
 battle
 creek
+st
 philip
 neri
 fraternity
@@ -14,8 +15,12 @@ academy
 street
 battle
 creek
+mi
 meet
+st
 sunday
+pm
+st
 philip
 neri
 parish
@@ -23,5 +28,7 @@ prayer
 room
 capital
 ave
+ne
 battle
 creek
+mi

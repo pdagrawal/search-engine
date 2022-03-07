@@ -1,15 +1,15 @@
+an
 abb
 irb
 manipulating
-part
 front
 pedastal
 glue
 dispenser
+an
 abb
 irb
 manipulating
-part
 front
 pedastal
 glue
@@ -18,9 +18,7 @@ return
 home
 page
 workspace
-and
 robotrak
-are
 registered
 trademarks
 robot

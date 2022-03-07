@@ -1,11 +1,12 @@
 ozone
 recommendation
-for
 amip
+ii
 ozone
 recommendation
-for
 amip
+ii
+an
 intercomparison
 existing
 climatologies
@@ -20,10 +21,8 @@ last
 update
 october
 for
-further
 information
 contact
-the
 amip
 project
 office

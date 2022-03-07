@@ -11,6 +11,8 @@ acu
 key
 issues
 index
+st
+nd
 cum
 alabama
 edwards
@@ -417,6 +419,7 @@ morgan
 conover
 rhode
 island
+st
 germain
 tiernan
 south
@@ -456,6 +459,8 @@ poage
 wright
 purcell
 young
+de
+la
 garza
 white
 burleson

@@ -157,6 +157,7 @@ leahy
 stafford
 virginia
 byrd
+jr
 scott
 washington
 jackson

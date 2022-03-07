@@ -58,6 +58,7 @@ elliot
 house
 dow
 jones
+co
 charlayne
 huntergault
 the
@@ -140,13 +141,13 @@ cnn
 thomas
 winship
 center
-for
 foreign
 journalists
 executive
 director
 william
 orme
+jr
 committee
 protect
 journalists

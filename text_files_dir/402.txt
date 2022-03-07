@@ -157,6 +157,7 @@ stafford
 leahy
 virginia
 byrd
+jr
 scott
 washington
 magnuson

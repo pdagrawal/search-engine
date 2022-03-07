@@ -6,7 +6,6 @@ access
 statistics
 transmission
 statistics
-from
 aug
 aug
 reqs
@@ -544,8 +543,6 @@ zaacuctegshickory
 zacotelkomqsomvdoornj
 total
 transfers
-for
-each
 archive
 section
 reqs

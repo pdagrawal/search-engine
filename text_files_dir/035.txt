@@ -2,11 +2,10 @@ netshade
 screen
 shot
 netshade
-for
 windows
+go
 back
 view
-the
 security
 levels
 pane

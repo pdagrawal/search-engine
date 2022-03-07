@@ -413,6 +413,7 @@ vigorito
 clark
 rhode
 island
+st
 germain
 tiernan
 south
@@ -451,6 +452,8 @@ poage
 wright
 price
 young
+de
+la
 garza
 white
 burleson
@@ -471,7 +474,9 @@ downing
 whitehurst
 satterfield
 daniel
+rw
 daniel
+wc
 butler
 robinson
 parris

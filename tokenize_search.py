@@ -1,4 +1,4 @@
-import sys, os
+import os
 import time
 from bs4 import BeautifulSoup
 import re
@@ -10,10 +10,11 @@ def main(input_dir, output_dir):
     file_values = []
     time_values = []
     start = time.process_time_ns()
+    stopwords = load_stop_words()
     for filename in os.scandir(input_dir):
         if filename.is_file():
             file_count += 1
-            tokens = extract_tokens(filename.path)
+            tokens = extract_tokens(filename.path, stopwords)
             create_token_files(output_dir, filename.name, tokens)
             file_values.append(file_count)
             time_values.append(time.process_time_ns()/1000000)
@@ -25,8 +26,16 @@ def main(input_dir, output_dir):
     plot_graph(file_values, time_values)
 
 
+def load_stop_words():
+    with open('stoplist.txt') as f:
+        stopwords = f.read().splitlines()
+    stopwords = [re.sub(r'[0-9]+|\W+|_', '', word) for word in stopwords]
+    stopwords = [word.lower() for word in stopwords if len(word) > 1]
+    return stopwords
+
+
 # This method takes path of HTML file and return list of tokens
-def extract_tokens(file_path):
+def extract_tokens(file_path, stopwords):
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as fp:
         soup = BeautifulSoup(fp, features="html.parser")
     for script in soup(["script", "style"]):
@@ -34,7 +43,7 @@ def extract_tokens(file_path):
     text = soup.get_text()
     words = text.split()
     words = [re.sub(r'[0-9]+|\W+|_', '', word) for word in words]
-    words = [word.lower() for word in words if len(word) > 2]
+    words = [word.lower() for word in words if len(word) > 1 and (word not in stopwords)]
     return words
 
 '''
@@ -80,9 +89,9 @@ def plot_graph(x_values, y_values):
     plt.show()
 
 
-if __name__ == "__main__":
-    start = time.process_time_ns()
-    print('All the times are in milliseconds')
-    main(sys.argv[1], sys.argv[2])
-    end = time.process_time_ns()
-    print("Total elapsed time:", (end - start)/1000000)
+def tokenize_words(input_dir, output_dir):
+    # start = time.process_time_ns()
+    # print('All the times are in milliseconds')
+    main(input_dir, output_dir)
+    # end = time.process_time_ns()
+    # print("Total elapsed time:", (end - start)/1000000)

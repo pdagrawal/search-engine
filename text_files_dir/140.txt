@@ -1,5 +1,6 @@
 official
 learn
+at
 home
 web
 site
@@ -9,6 +10,7 @@ facts
 title
 fact
 sheet
+ib
 fact
 sheet
 iib
@@ -20,9 +22,7 @@ frequently
 asked
 questions
 purpose
-and
 history
-the
 national
 home
 education

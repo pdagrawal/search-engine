@@ -11,7 +11,6 @@ home
 sample
 reports
 click
-here
 download
 acrobat
 reader
@@ -27,11 +26,9 @@ independent
 accountants
 verification
 report
-have
+we
 examined
-the
 performance
-the
 all
 value
 composite
@@ -58,7 +55,6 @@ fees
 quote
 sheet
 fees
-are
 determined
 ashland
 accounting
@@ -68,4 +64,5 @@ copyright
 ashland
 accounting
 services
+pc
 infoaascpacom

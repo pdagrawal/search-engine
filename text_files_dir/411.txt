@@ -3,6 +3,7 @@ senate
 ratings
 acu
 ratings
+us
 senate
 alabama
 heflin

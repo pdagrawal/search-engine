@@ -2,6 +2,7 @@ acu
 ratings
 acu
 ratings
+us
 senate
 alabama
 allen
@@ -149,6 +150,7 @@ aiken
 stafford
 virginia
 byrd
+jr
 scott
 washington
 jackson
