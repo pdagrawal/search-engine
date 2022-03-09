@@ -11,11 +11,10 @@ def main(input_dir, output_dir):
     time_values = []
     start = time.process_time_ns()
     stopwords = load_stop_words()
-    for filename in os.scandir(input_dir):
-        if filename.is_file():
-            file_count += 1
-            tokens = extract_tokens(filename.path, stopwords)
-            create_token_files(output_dir, filename.name, tokens)
+    for filename in sorted(os.listdir(input_dir)):
+        file_count += 1
+        tokens = extract_tokens(input_dir + '/' + filename, stopwords)
+        create_token_files(output_dir, filename, tokens)
         if file_count%50 == 0:
             file_values.append(file_count)
             time_values.append(time.process_time_ns()/1000000)
