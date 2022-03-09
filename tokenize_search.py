@@ -16,9 +16,9 @@ def main(input_dir, output_dir):
             file_count += 1
             tokens = extract_tokens(filename.path, stopwords)
             create_token_files(output_dir, filename.name, tokens)
+        if file_count%50 == 0:
             file_values.append(file_count)
             time_values.append(time.process_time_ns()/1000000)
-        if file_count%50 == 0:
             end = time.process_time_ns()
             print(f'Parsed Files {file_count} and Time taken {(end - start)/1000000}')
             start = time.process_time_ns()
@@ -72,12 +72,13 @@ def create_frequency_files(output_dir):
                         frequency_book[token] += 1
                     else:
                         frequency_book[token] = 1
+    processed_frequency_book = { key:val for key, val in frequency_book.items() if val != 1 }
     with open('frequencies_sorted_by_token.txt', 'w') as f:
-        for word in sorted(frequency_book.keys()):
-            f.write(word + ' ' + str(frequency_book[word]) + '\n')
+        for word in sorted(processed_frequency_book.keys()):
+            f.write(word + ' ' + str(processed_frequency_book[word]) + '\n')
 
     with open('frequencies_sorted_by_frequency.txt', 'w') as f:
-        for word, frequency in sorted(frequency_book.items(), key=lambda x: x[1], reverse=True):
+        for word, frequency in sorted(processed_frequency_book.items(), key=lambda x: x[1], reverse=True):
             f.write(word + ' ' + str(frequency) + '\n')
 
 # This methods plots grapth between no of files and time taken in processing them
