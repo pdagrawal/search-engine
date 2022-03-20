@@ -87,7 +87,7 @@ def create_wts_files(words_in_files, postings_list, output_dir):
         with open(filepath, 'w') as f:
             for word in list(set(words)):
                 if word in postings_list:
-                    f.write(word + ' ' + str(postings_list[word][filename]) + '\n')
+                    f.write(word + ' ' + str('%.4f'%postings_list[word][filename]) + '\n')
 
 # Remove the words which occurs only once in the entire corpus
 def remove_rare_words(inverted_index):
