@@ -3,7 +3,7 @@ import time
 from tokenize_search import tokenize_words
 
 def calculate_weights(input_dir, output_dir):
-    tokenize_words(input_dir, 'text_files_dir')
+    tokenize_words(input_dir, output_dir)
 
 if __name__ == "__main__":
     start = time.process_time_ns()
