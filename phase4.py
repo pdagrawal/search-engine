@@ -3,10 +3,11 @@ import os
 import time
 from bs4 import BeautifulSoup
 import re
+from prettytable import PrettyTable
 
 # This method is responsible to call all the methods in the required sequence
 def main(input_dir, query_words, query_wts = None):
-    query_words = query_words.split(',')
+    query_words = [word.lower() for word in query_words.split(',')]
     query_weights = calculate_query_weights(query_words, query_wts)
     stopwords = load_stop_words()
     inverted_index = {}
@@ -23,12 +24,14 @@ def main(input_dir, query_words, query_wts = None):
     query_denominator = square_root_of_sum_of_squares(query_weights.values())
     similarity_scores = calculate_similarity(query_words, postings_list, numerator_values,
                                             query_denominator, documents)
-    if list(similarity_scores.values())[0] == 0:
-        print('No matching doc found')
-        return
+    search_result = PrettyTable()
+    search_result.field_names = ["Rank", "Document ID", "Similarity Score"]
     for index, name in enumerate(list(similarity_scores.keys())[:10]):
         if similarity_scores[name] != 0:
-            print(f'Rank: {index + 1} => {name} with score {similarity_scores[name]}')
+            search_result.add_row([index + 1, name, similarity_scores[name]])
+    print(search_result)
+    if list(similarity_scores.values())[0] == 0:
+        print('No matching document found')
 
 
 # This method loads stopwords from the txt file and returns a list of them
@@ -120,10 +123,9 @@ def calculate_similarity(query_words, postings_list, numerator_values, query_den
 
 if __name__ == "__main__":
     start = time.process_time_ns()
-    print('All the times are in milliseconds')
     if len(sys.argv) == 4:
         main(sys.argv[1], sys.argv[2], sys.argv[3])
     else:
         main(sys.argv[1], sys.argv[2])
     end = time.process_time_ns()
-    print("Total elapsed time:", (end - start)/1000000)
+    print(f"Total elapsed time: {(end - start)/1000000} ms")
