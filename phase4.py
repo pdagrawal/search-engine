@@ -36,7 +36,7 @@ def main(input_dir, output_dir, query_words, query_wts = None):
     query_denominator = square_root_of_sum_of_squares(query_weights.values())
     similarity_scores = calculate_similarity(query_words, postings_list, numerator_values,
                                             query_denominator, documents)
-    print(similarity_scores)
+    print(list(similarity_scores.keys())[:10])
     # create_output_files(postings_list, output_dir)
     # plot_graph(file_values, time_values)
 
