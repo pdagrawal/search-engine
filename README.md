@@ -13,5 +13,7 @@ python indexing.py files output_files
 For Phase-4
 ```
 python indexing.py files output_files
+```
+```
 python retrieve.py computer,network 0.5,0.75
 ```
