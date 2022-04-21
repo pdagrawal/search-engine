@@ -15,15 +15,14 @@ def main(query_words, query_wts = None):
     query_denominator = square_root_of_sum_of_squares(query_weights.values())
     similarity_scores = calculate_similarity(query_words, postings_list, numerator_values,
                                             query_denominator, documents)
-    print(similarity_scores)
-    # search_result = PrettyTable()
-    # search_result.field_names = ["Rank", "Document ID", "Similarity Score"]
-    # for index, name in enumerate(list(similarity_scores.keys())[:10]):
-    #     if similarity_scores[name] != 0:
-    #         search_result.add_row([index + 1, name, similarity_scores[name]])
-    # print(search_result)
-    # if list(similarity_scores.values())[0] == 0:
-    #     print('No matching document found')
+    search_result = PrettyTable()
+    search_result.field_names = ["Rank", "Document ID", "Similarity Score"]
+    for index, name in enumerate(list(similarity_scores.keys())[:10]):
+        if similarity_scores[name] != 0:
+            search_result.add_row([index + 1, name, similarity_scores[name]])
+    print(search_result)
+    if list(similarity_scores.values())[0] == 0:
+        print('No matching document found')
 
 
 # Read dictionary and posting files to get postings list
@@ -38,11 +37,12 @@ def get_postings_for_query(query_words):
             continue
         else:
             postings_list[word] = {}
-        word_index = dictionaries.index(word)
-        starting_index = int(dictionaries[word_index+2])
-        for i in range(0,int(dictionaries[word_index+1])):
-            posting = postings[starting_index-1+i]
-            postings_list[word][posting.split(',')[0]] = float(posting.split(',')[1])
+        if word in dictionaries:
+            word_index = dictionaries.index(word)
+            starting_index = int(dictionaries[word_index+2])
+            for i in range(0,int(dictionaries[word_index+1])):
+                posting = postings[starting_index-1+i]
+                postings_list[word][posting.split(',')[0]] = float(posting.split(',')[1])
     return postings_list
 
 # Calculate query weights using their frequency in query
