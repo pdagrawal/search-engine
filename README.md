@@ -17,11 +17,11 @@ python indexing.py files output_files
 ```
 After that we can run as many retrievals as we want
 
-Exampls: 1
+Exampls-1: with query weights in parameters
 ```
 python retrieve.py computer,network 0.5,0.75
 ```
-Exampls: 2
+Exampls-2: without query weights
 ```
 python retrieve.py international,affairs
 ```
