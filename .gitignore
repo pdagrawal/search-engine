@@ -1,3 +1,4 @@
 wts_files/*
 text_files/*
 output_files/*
+__pycache__/*
