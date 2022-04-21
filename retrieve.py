@@ -64,6 +64,7 @@ def calculate_numerators(query_words, postings_list, query_weights, numerators):
                 numerators[doc] += postings_list[term][doc] * query_weights[term]
     return numerators
 
+# This method calculates the square root of sum of squares
 def square_root_of_sum_of_squares(numbers):
     total = 0.0
     for number in numbers:
