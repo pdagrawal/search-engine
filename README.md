@@ -16,6 +16,7 @@ First run the indexing command to generate the dictionary file and posting file 
 python indexing.py files output_files
 ```
 After that we can run as many retrievals as we want
+
 Exampls: 1
 ```
 python retrieve.py computer,network 0.5,0.75
